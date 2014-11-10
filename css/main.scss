@@ -1,0 +1,99 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+// colors
+$christmasred: #e64a63; 
+$bodycolor: #5f5252;
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: $bodycolor;
+}
+
+.navbar {
+	display: none;
+}
+
+// Fonts
+h1 {
+	color: $christmasred;
+	font-size: 88px;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 28px;
+	font-weight: 700;
+}
+
+p {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.btn {
+	border-radius: 0px;
+	background: $christmasred;
+	border: 3px solid white;
+	&:hover {
+		background: $christmasred;
+		border: 3px solid white;
+	}
+}
+
+.form-control {
+	border-radius: 0px;
+}
+
+// resets
+
+
+// 
+.hero-box {
+	max-width: 1170px;
+	width: 90%;
+	margin: 0 auto;
+	background: white;
+	border: 3px solid $christmasred;
+	padding: 50px;
+
+}
+
+
+// FIRST SECTION
+.section {
+	&.one {
+		background: #b1d2d3;
+	}
+
+	// image choices
+	&.two {
+		.image-choice-container {
+			padding: 10px;
+			.image-choice {
+				height: 450px;
+				background: #ccc;
+				cursor: pointer;
+				&:hover {
+					background: #eee;
+				}
+			}			
+		}
+
+	}
+}
+
+
