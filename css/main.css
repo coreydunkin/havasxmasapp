@@ -54,7 +54,7 @@ p {
 .section.two .image-choice-container {
   padding: 10px; }
   .section.two .image-choice-container .image-choice {
-    height: 450px;
+    height: 650px;
     background: #ccc;
     cursor: pointer; }
     .section.two .image-choice-container .image-choice:hover {

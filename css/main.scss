@@ -12,6 +12,7 @@ $bodycolor: #5f5252;
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -84,7 +85,7 @@ p {
 		.image-choice-container {
 			padding: 10px;
 			.image-choice {
-				height: 450px;
+				height: 650px;
 				background: #ccc;
 				cursor: pointer;
 				&:hover {

@@ -2,24 +2,63 @@ console.log('hello');
 
 var app = angular.module( 'myApp', [] );
 
-// $("#onepage").onepage_scroll({
-//    sectionContainer: ".section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-//    easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-//                                     // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-//    animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-//    pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-//    updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-//    beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-//    afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
-//    loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-//    keyboard: true,                  // You can activate the keyboard controls
-//    responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-//                                     // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-//                                     // the browser's width is less than 600, the fallback will kick in.
-//    direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-// }); 
+// SETTING UP SLIDE FUNCTIONS
+app.directive('mySlide', function () {
+
+    var slideInit = function (scope, lElement, attrs, controller, element) {
+      // Set up slides
+    };
+  
+    return function (scope, element, attrs) {
+      $('#onepage').fullpage({
+          //Scrolling
+          css3: true,
+          scrollingSpeed: 700,
+          easing: 'easeInQuart',
+          easingcss3: 'ease',
+          afterRender: function(){
+                scope.controllerSlideOne();
+          },
+          afterLoad: function(anchorLink, index){
+              //using functions for each slide
+              if(index == 1){
+                scope.controllerSlideOne();
+              }
+              if(index == 2){
+                scope.controllerSlideTwo();
+              }
+              if(index == 3){
+                scope.controllerSlideThree();
+              }                                          
+              if(index == 4){
+                scope.controllerSlideFour();
+              }
+          }
+      });
+
+        // Set up main nav
+        // $.fn.fullpage.setAllowScrolling(false);
+
+        $('a.btn.down').on('click', function() {
+
+          $.fn.fullpage.moveSectionDown();
+        });
+    };
+    // return {
+    //     restrict: 'A',
+    //     scope: {
+    //     },
+    //     link: slideInit,
+    //     controller:function($scope){
+    //         console.info("enter directive controller");
+    //         $scope.gallery = [];
+    //         $scope.message = 'POOPY';
 
 
+
+    //     }
+    // };
+});
 
 // Controller for slides
 app.controller( 'MainCtrl', function( $scope, $interval, $timeout, $window, $http ) {
@@ -27,40 +66,26 @@ app.controller( 'MainCtrl', function( $scope, $interval, $timeout, $window, $htt
   // we control our app from here
   $scope.textBox = 'sometext';
 
-
-// Set up slides
-$('#onepage').fullpage({
-    // anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-    //Scrolling
-    css3: true,
-    scrollingSpeed: 700,
-    easing: 'easeInQuart',
-    easingcss3: 'ease',
-    afterLoad: function(anchorLink, index){
-        //using index
-        if(index == 2){
-        	controllerSlideTwo();
-        }
-
-        // //using anchorLink
-        // if(anchorLink == 'secondSlide'){
-        //     alert("Section 2 ended loading");
-        // }
-    }
-});
-
-  // Set up main nav
-  // $.fn.fullpage.setAllowScrolling(false);
-
-  $('a.btn.down').on('click', function() {
-
-  	$.fn.fullpage.moveSectionDown();
-  });
-
-  function controllerSlideTwo() {
-  	console.log('yeah');
+  // FUNCTION FOR SLIDE ONE
+  $scope.controllerSlideOne = function() {
+    console.info('Slide One');
   };
-  $scope.controllerSlideTwo = controllerSlideTwo;
+
+  // FUNCTION FOR SLIDE TWO
+  $scope.controllerSlideTwo = function() {
+    console.info('Slide Two');
+  };  
+
+  // FUNCTION FOR SLIDE THREE
+  $scope.controllerSlideThree = function() {
+    console.info('Slide Three');
+  };
+
+  // FUNCTION FOR SLIDE FOUR
+  $scope.controllerSlideFour = function() {
+    console.info('Slide Four');
+  };
 
 });
+
 
