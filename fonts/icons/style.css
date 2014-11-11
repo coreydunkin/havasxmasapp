@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-h0bmtt');
+	src:url('fonts/icomoon.eot?#iefix-h0bmtt') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-h0bmtt') format('woff'),
+		url('fonts/icomoon.ttf?-h0bmtt') format('truetype'),
+		url('fonts/icomoon.svg?-h0bmtt#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facewrap-icons_bow:before {
+	content: "\e600";
+}
+.icon-facewrap-icons_camera:before {
+	content: "\e601";
+}
+.icon-facewrap-icons_diamond:before {
+	content: "\e602";
+}
+.icon-facewrap-icons_edit:before {
+	content: "\e603";
+}
+.icon-facewrap-icons_facebook:before {
+	content: "\e604";
+}
+.icon-facewrap-icons_friends:before {
+	content: "\e605";
+}
+.icon-facewrap-icons_pressie-01:before {
+	content: "\e606";
+}
+.icon-facewrap-icons_pressie-02:before {
+	content: "\e607";
+}
+.icon-facewrap-icons_pressie-03:before {
+	content: "\e608";
+}
+.icon-facewrap-icons_tick:before {
+	content: "\e609";
+}
+.icon-facewrap-icons_twitter:before {
+	content: "\e60a";
+}
