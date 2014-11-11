@@ -65,6 +65,16 @@ p {
   position: relative;
   z-index: 1; }
 
+.social-box {
+  max-width: 1170px;
+  width: 90%;
+  margin: 50px auto;
+  background: white;
+  border: 5px solid #e64a63;
+  padding: 50px;
+  position: relative;
+  z-index: 1; }
+
 .icon-facewrap-icons_diamond {
   color: #e64a63;
   margin: 25px auto 15px auto;
@@ -159,3 +169,5 @@ p {
       -moz-animation-delay: 0.9s;
       -o-animation-delay: 0.9s;
       animation-delay: 0.9s; }
+.section.three .row {
+  min-height: 810px; }
